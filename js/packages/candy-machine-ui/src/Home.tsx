@@ -19,13 +19,11 @@ import {
 } from './candy-machine';
 import { AlertState, toDate, formatNumber, getAtaForMint } from './utils';
 import { MintCountdown } from './MintCountdown';
-import { MintButton } from './MintButton';
+import { BLUE_EUI_BUTTON_COLOR, MintButton } from './MintButton';
 import { GatewayProvider } from '@civic/solana-gateway-react';
 import { sendTransaction } from './connection';
 
 import ORCANAUTS_VISUAL from "./orcanauts.svg";
-
-const BLUE_EUI_BUTTON_COLOR = "#006bb4"
 
 const ConnectButton = styled(WalletDialogButton)`
   width: 100%;
