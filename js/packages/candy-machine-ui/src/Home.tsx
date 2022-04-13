@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { Container, Snackbar } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
 import Alert from '@material-ui/lab/Alert';
+import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { PublicKey, Transaction } from '@solana/web3.js';
@@ -24,6 +25,7 @@ import { GatewayProvider } from '@civic/solana-gateway-react';
 import { sendTransaction } from './connection';
 
 import ORCANAUTS_VISUAL from "./orcanauts.svg";
+import { Height } from '@material-ui/icons';
 
 const ConnectButton = styled(WalletDialogButton)`
   width: 100%;
@@ -325,13 +327,18 @@ const Home = (props: HomeProps) => {
 
   return (
     <Container style={{ marginTop: 100 }}>
-          <Container maxWidth="xs" style={{
-        position: 'relative',
-        marginTop: '50px',
-      }}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
       {/* TODO: Replace with Swim visual */}
-      <img src={ORCANAUTS_VISUAL} alt="Orcanauts Visual"/>
-      </Container>
+      <img src={ORCANAUTS_VISUAL} alt="Orcanauts Visual" style={{
+        height:"500%", width:"50%"
+      }}/>
+      </Box>
       <Container maxWidth="xs" style={{
         position: 'relative',
         marginTop: '100px',
