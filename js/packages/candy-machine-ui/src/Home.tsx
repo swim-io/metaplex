@@ -25,12 +25,14 @@ import { sendTransaction } from './connection';
 
 import ORCANAUTS_VISUAL from "./orcanauts.svg";
 
+const BLUE_EUI_BUTTON_COLOR = "#006bb4"
+
 const ConnectButton = styled(WalletDialogButton)`
   width: 100%;
   height: 60px;
   margin-top: 10px;
   margin-bottom: 5px;
-  background: #006bb4;
+  background: ${BLUE_EUI_BUTTON_COLOR};
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -340,7 +342,7 @@ const Home = (props: HomeProps) => {
           style={{
             padding: 24,
             paddingBottom: 10,
-            backgroundColor: '#fff',
+            backgroundColor: '#fff', // WHITE
             borderRadius: 6,
           }}
         >
