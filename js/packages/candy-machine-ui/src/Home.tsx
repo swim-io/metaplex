@@ -24,9 +24,6 @@ import { BLUE_EUI_BUTTON_COLOR, MintButton } from './MintButton';
 import { GatewayProvider } from '@civic/solana-gateway-react';
 import { sendTransaction } from './connection';
 
-import ORCANAUTS_VISUAL from "./orcanauts.svg";
-import { Height } from '@material-ui/icons';
-
 const ConnectButton = styled(WalletDialogButton)`
   width: 100%;
   height: 60px;
@@ -334,15 +331,18 @@ const Home = (props: HomeProps) => {
           alignItems: 'center',
         }}
       >
-      {/* TODO: Replace with Swim visual */}
-      <img src={ORCANAUTS_VISUAL} alt="Orcanauts Visual" style={{
+        {/* TODO: Replace with Swim visual */}
+        {/* <img src={ORCANAUTS_VISUAL} alt="Orcanauts Visual" style={{
         height:"500%", width:"50%"
-      }}/>
+      }}/> */}
       </Box>
-      <Container maxWidth="xs" style={{
-        position: 'relative',
-        marginTop: '100px',
-      }}>
+      <Container
+        maxWidth="xs"
+        style={{
+          position: 'relative',
+          marginTop: '100px',
+        }}
+      >
         <Paper
           style={{
             padding: 24,
