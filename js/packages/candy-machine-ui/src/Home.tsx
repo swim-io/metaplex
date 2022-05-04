@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { Container, Snackbar } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
 import Alert from '@material-ui/lab/Alert';
+import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { PublicKey, Transaction } from '@solana/web3.js';
@@ -19,16 +20,19 @@ import {
 } from './candy-machine';
 import { AlertState, toDate, formatNumber, getAtaForMint } from './utils';
 import { MintCountdown } from './MintCountdown';
-import { MintButton } from './MintButton';
+import { BLUE_EUI_BUTTON_COLOR, MintButton } from './MintButton';
 import { GatewayProvider } from '@civic/solana-gateway-react';
 import { sendTransaction } from './connection';
+
+import ORCANAUTS_VISUAL from "./orcanauts.svg";
+import { Height } from '@material-ui/icons';
 
 const ConnectButton = styled(WalletDialogButton)`
   width: 100%;
   height: 60px;
   margin-top: 10px;
   margin-bottom: 5px;
-  background: linear-gradient(180deg, #604ae5 0%, #813eee 100%);
+  background: ${BLUE_EUI_BUTTON_COLOR};
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -323,12 +327,27 @@ const Home = (props: HomeProps) => {
 
   return (
     <Container style={{ marginTop: 100 }}>
-      <Container maxWidth="xs" style={{ position: 'relative' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
+      {/* TODO: Replace with Swim visual */}
+      <img src={ORCANAUTS_VISUAL} alt="Orcanauts Visual" style={{
+        height:"500%", width:"50%"
+      }}/>
+      </Box>
+      <Container maxWidth="xs" style={{
+        position: 'relative',
+        marginTop: '100px',
+      }}>
         <Paper
           style={{
             padding: 24,
             paddingBottom: 10,
-            backgroundColor: '#151A1F',
+            backgroundColor: '#fff', // white
             borderRadius: 6,
           }}
         >

@@ -12,12 +12,14 @@ import {
   removeAccountChangeListener,
 } from '@identity.com/solana-gateway-ts';
 
+export const BLUE_EUI_BUTTON_COLOR = "#006bb4"
+
 export const CTAButton = styled(Button)`
   width: 100%;
   height: 60px;
   margin-top: 10px;
   margin-bottom: 5px;
-  background: linear-gradient(180deg, #604ae5 0%, #813eee 100%);
+  background: ${BLUE_EUI_BUTTON_COLOR};
   color: white;
   font-size: 16px;
   font-weight: bold;
