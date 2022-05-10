@@ -24,7 +24,20 @@ import { ThemeProvider, createTheme } from '@material-ui/core';
 const theme = createTheme({
   palette: {
     type: 'light',
+    primary: {
+      main: '#212121',
+    },
+    text: {
+      primary: '#fafafa',
+    },
   },
+  props: {
+    MuiListItem: {
+      style: {
+        backgroundColor: "#424242"
+      }
+    }
+  }
 });
 
 const getCandyMachineId = (): anchor.web3.PublicKey | undefined => {
