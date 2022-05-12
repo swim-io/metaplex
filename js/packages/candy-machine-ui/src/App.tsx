@@ -23,18 +23,15 @@ import { ThemeProvider, createTheme } from '@material-ui/core';
 
 const theme = createTheme({
   palette: {
-    type: 'light',
+    type: "light",
     primary: {
-      main: '#212121',
-    },
-    text: {
-      primary: '#fafafa',
+      main: "#03a9f4",
     },
   },
   props: {
     MuiListItem: {
       style: {
-        backgroundColor: "#424242"
+        backgroundColor: "#e1f5fe"
       }
     }
   }
